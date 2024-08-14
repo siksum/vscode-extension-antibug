@@ -1,0 +1,133 @@
+.rule__list {
+  max-height: 300px;
+  max-height: 80%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 8px 0;
+}
+
+.analysis__files select {
+  padding-right: 50px;
+}
+
+.none__files :disabled {
+  display: none;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+}
+
+.button button {
+  margin-bottom: 12px;
+}
+
+.analysis__run {
+  background: var(--button-background-primary);
+}
+
+.unitTest {
+  background: var(--button-background-secondary);
+}
+
+.auditReport {
+  background: var(--button-background-tertiary);
+}
+
+/* CHECKBOX START */
+.rule__button {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.rule__button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.rule__button input:checked ~ .checkbox__checkmark {
+  background-color: var(--vscode-input-background);
+}
+.rule__button input:checked ~ .checkbox__checkmark:after {
+  opacity: 1;
+  top: -8px;
+}
+.rule__button input:checked ~ .rule__text {
+  background-position: 0 0;
+  color: var(--vscode-input-background);
+}
+
+.rule__button:hover input:checked ~ .checkbox__checkmark {
+  background-color: var(--vscode-input-background);
+}
+.rule__button:hover .rule__text {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.rule__button .checkbox__checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  transition: background-color 0.25s ease;
+  border-radius: 4px;
+}
+.rule__button .checkbox__checkmark:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  width: 10px;
+  height: 20px;
+  border: solid #f1f3f5;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease, top 0.25s ease;
+}
+.rule__button .rule__text {
+  color: #fff;
+  line-height: 1.4;
+  font-size: 16px;
+  transition: font-weight 0.25s ease;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    #fff 0%,
+    var(--vscode-input-background) 50%,
+    var(--vscode-input-background) 80%,
+    var(--vscode-input-background) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  padding: 15px;
+  padding-left: 52px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.25s ease, background 1s ease, color 0.25s ease;
+}
+/* CHECKBOX END */
+
+.none__files {
+  display: flex;
+  gap: 12px;
+}
+
+.none__files::before,
+.none__files::after {
+  content: "";
+  border: 1px dashed #fff;
+  width: 30%;
+}

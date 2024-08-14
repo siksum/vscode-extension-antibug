@@ -1,0 +1,36 @@
+.compile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.compile__files select {
+  padding-right: 55px;
+}
+
+.compile__run {
+  position: relative;
+  background: var(--button-background-primary);
+}
+.compile__run.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin: -16px;
+  border-radius: 50%;
+  border: 4px dotted #fff;
+  animation: spin 1s linear infinite;
+}
+
+.compile__run.loading {
+  color: transparent;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

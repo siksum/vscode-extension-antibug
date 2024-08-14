@@ -1,0 +1,95 @@
+@import "./functions.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contract__address,
+.contract__balance {
+  font-size: 18px;
+  font-weight: 600;
+}
+.receipts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.receipt__info-title {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #ccc;
+  height: fit-content;
+  padding-bottom: 12px;
+}
+.receipt__info-tx-hash {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.receipt__info-title svg.fa-check-circle,
+.receipt__info-title svg.fa-times-circle {
+  font-size: 24px;
+}
+
+.receipt__info-tx-hash {
+  flex: 1;
+  text-align: start;
+  font-size: 18px;
+}
+
+.receipt__info-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 30px 30px 0 30px;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease-in-out;
+}
+.receipt__info-data > div {
+  display: flex;
+  column-gap: 12px;
+}
+.receipt__info-data > div > div:nth-child(3) {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.receipt__info-data > div > div:nth-child(1) {
+  min-width: 280px;
+}
+
+.receipt__info-data.hidden {
+  display: none;
+}
+
+.receipt__error {
+  word-break: break-word;
+}
+
+/* Table */
+.contract__storage {
+  width: 100%;
+}
+.contract__storage table {
+  border-collapse: collapse;
+  width: 98%;
+  margin: 20px auto;
+  table-layout: fixed;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

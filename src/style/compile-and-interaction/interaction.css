@@ -1,0 +1,46 @@
+.interaction {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.interaction__from-list {
+  display: flex;
+}
+
+.interaction__from-list select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 55px;
+}
+
+.interaction__from-list button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+
+  background: var(--button-background-primary);
+  color: #fff;
+  font-size: 18x;
+
+  border-top-right-radius: var(--input-border-radius);
+  border-bottom-right-radius: var(--input-border-radius);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.interaction__value-amount {
+  display: flex;
+}
+.interaction__value-amount input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.interaction__value-amount select {
+  width: 120px;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

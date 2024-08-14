@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('head.ejs') %>
+    <title>Analysis Result</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__nav">
+        <p>Dashboard</p>
+        <nav>
+          <div class="header__nav-language">
+            <div class="underline"></div>
+            <div class="korean"><button>Korean</button></div>
+            <div class="english"><button>English</button></div>
+          </div>
+        </nav>
+      </div>
+      <button class="extract">View Details</button>
+    </div>
+    <!-- Korean -->
+    <div class="korean-content"><%- include('korean.ejs') %></div>
+
+    <!-- English -->
+    <div class="english-content"><%- include('english.ejs') %></div>
+
+    <!-- Script -->
+    <%- include('scripts.ejs') %>
+  </body>
+</html>

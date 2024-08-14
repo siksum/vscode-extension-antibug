@@ -1,0 +1,10 @@
+@import "./compile.css";
+@import "./interaction.css";
+@import "./deploy.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+

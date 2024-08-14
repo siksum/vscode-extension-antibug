@@ -1,0 +1,75 @@
+.deploy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.deploy__run {
+  display: flex;
+}
+
+.deploy__run-deploy {
+  background: var(--button-background-primary);
+
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.deploy__run-show-arguments {
+  width: 40px;
+
+  background: #fff;
+  color: var(--button-background-primary);
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.deploy__arguments {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.deploy__argument {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.deploy__run-show-arguments svg {
+  transition: transform 0.3s ease;
+}
+.deploy__run-show-arguments.rotate svg.fa-chevron-down {
+  transform: rotate(-180deg);
+}
+
+.deploy__argument-info {
+  min-width: 160px;
+  display: flex;
+}
+.deploy__argument-info .type {
+  width: 70px;
+  color: #b2ccd6;
+}
+.deploy__argument-info .name {
+  color: #fff;
+}
+
+.deploy__arguments.hidden {
+  display: none;
+}
+
+.deploy__info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.deploy__info-abi,
+.deploy__info-bytecodes {
+  cursor: pointer;
+}
+
+.deploy__info i {
+  font-size: 20px;
+  color: #fff;
+}

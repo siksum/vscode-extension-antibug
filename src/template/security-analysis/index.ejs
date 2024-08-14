@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('head.ejs') %>
+    <title>Security Analysis</title>
+  </head>
+  <body>
+    <%- include('seperator.ejs',{text: "Select File"}) %>
+    <div class="analysis__files">
+      <select>
+        <!-- <option class="none__files" disabled selected>
+          Select a file to analyze
+        </option> -->
+      </select>
+    </div>
+    <%- include('seperator.ejs',{text: "Select Rule"}) %>
+    <div class="rule">
+      <div class="rule__list">
+        <% ['reentrancy','delegatecall', 'selfdestruct', 'incorrect-return',
+        'weak-prng', 'overflow','ownership', 'tx-origin'].forEach(
+        function(value){ %> <%- include('checkbox', { text: value, value: value
+        }) %> <% }); %>
+      </div>
+    </div>
+    <div class="button">
+      <button class="analysis__run">Run Analysis</button>
+      <div class="auditReport__extract hidden"></div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <%-include('scripts.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('head.ejs') %>
+    <title>Compile and Interaction</title>
+  </head>
+  <body>
+    <%- include('seperator.ejs',{text: "Compile"}) %>
+    <!-- COMPILE START-->
+    <%- include('compile.ejs') %>
+    <!-- COMPILE END -->
+
+    <%- include('seperator.ejs',{text: "Interaction"}) %>
+    <!-- INTERACTION START-->
+    <%- include('interaction.ejs') %>
+    <!-- INTERACTION END -->
+
+    <%- include('seperator.ejs',{text: "Deploy"}) %>
+    <!-- DEPLOY START-->
+    <%- include('deploy.ejs') %>
+    <!-- DEPLOY END -->
+
+    <!-- SCRIPTS -->
+    <%- include('scripts.ejs') %>
+  </body>
+</html>
